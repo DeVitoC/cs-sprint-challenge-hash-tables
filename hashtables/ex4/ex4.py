@@ -3,7 +3,12 @@ def has_negatives(a):
     YOUR CODE HERE
     """
     # Your code here
-
+    cache = {}
+    result = []
+    for num in a:
+        if -num in cache:
+            result.append(abs(num))
+        cache[num] = 1
     return result
 
 
